@@ -59,3 +59,7 @@ Contributors
 * Mark Galloway
 * Abram Hindle
 * Cole Mackenzie
+
+# References
+* https://github.com/abramhindle/WebSocketsExamples/blob/master/chat.py, author: https://github.com/abramhindle, referenced: 31/03/2022
+* https://github.com/solitariaa/CMPUT404-assignment-ajax/blob/master/static/index.html, author: https://github.com/solitariaa, referenced: 31/03/2022
