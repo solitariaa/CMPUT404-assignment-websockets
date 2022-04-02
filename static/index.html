@@ -1,6 +1,11 @@
 <!DOCTYPE HTML>
 <html> 
-  <head> 
+  <head>
+    <style>
+        body{
+            background-image: url('background.jpg')
+        }
+    </style> 
     <title>Websockets Assignment</title> 
     <meta charset="utf-8" /> 
     <meta content='width=device-width; height=device-height; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;' name='viewport' />
@@ -261,6 +266,7 @@ function wsSetup() {
     var url = "ws://"+host+"/subscribe";   
     socket = new WebSocket(url);
     socket.onopen = function() {
+        socket.send(JSON.stringify(world))
         console.log("The websocket connection has been built successfully!");
         //XXX: TODO What are you going to do here?
     };

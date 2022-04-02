@@ -82,6 +82,7 @@ myWorld = World()
 
 def set_listener( entity, data ):
     ''' do something with the update ! '''
+    send_all_json({entity: data})
 
 myWorld.add_set_listener( set_listener )
         
@@ -98,7 +99,8 @@ def read_ws(ws,client):
             break
         else:
             data = json.loads(msg)
-            send_all_json(data)
+            for object in data:
+                myWorld.set(object, data[object])
 
 @sockets.route('/subscribe')
 def subscribe_socket(ws):
